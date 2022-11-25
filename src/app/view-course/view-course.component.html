@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row m-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                   <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Duration</th>
+                            <th>Date</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of course">
+                            <td>{{i.id}}</td>
+                            <td>{{i.courseTitle}}</td>
+                            <td>{{i.courseDescription}}</td>
+                            <td>{{i.courseDuration}}</td>
+                            <td>{{i.courseDate}}</td>
+                            <td>{{i.courseVenue}}</td>
+                        </tr>
+                    </tbody>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
