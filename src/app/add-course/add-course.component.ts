@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AddCourseComponent {
 
-  api = []
   courseTitle = "";
   courseDescription = "";
   courseDuration = "";
