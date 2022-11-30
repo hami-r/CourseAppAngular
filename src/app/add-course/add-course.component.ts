@@ -8,11 +8,11 @@ import { ApiService } from '../api.service';
 })
 export class AddCourseComponent {
 
-  courseTitle = "";
-  courseDescription = "";
-  courseDuration = "";
-  courseDate = "";
-  courseVenue = "";
+  courseTitle = ""
+  courseDescription = ""
+  courseDuration = ""
+  courseDate = ""
+  courseVenue = ""
 
   constructor(private api:ApiService) {}
 
@@ -26,8 +26,19 @@ export class AddCourseComponent {
    console.log(data);
    
    this.api.addCourse(data).subscribe(
-    (response) => {
+    (response:any) => {
       console.log(response)
+      if (response.status == "success") {
+        alert("Added successfully")
+        this.courseTitle = ""
+        this.courseDescription = ""
+        this.courseDuration = ""
+        this.courseDate = ""
+        this.courseVenue = ""
+
+      } else {
+        alert("Something went wrong")
+      }
     }
    )
 
